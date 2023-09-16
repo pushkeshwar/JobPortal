@@ -1,0 +1,232 @@
+.background{
+    background-image: url(./backgound.jpg);
+    /* background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);    background-size: cover; */
+    background-position: center;
+    height:88%;
+    width:100%;
+    position: relative;
+}
+.heading{
+    margin-top: 10%;
+    position: absolute;
+}
+
+.heading h1{
+    font-family: 'Raleway',sans-serif; font-size: 45px; font-weight: 600; line-height: 40px; margin: 0 0 24px;
+}
+.heading h5{
+    margin-top: 1rem;
+    animation: fadeOut .8s linear 2s infinite alternate;
+}
+
+@keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+    }
+  }
+  
+  .fadeOut {
+    animation-name: fadeOut;
+  }
+
+
+  /* job cards */
+
+  .job-card h4{
+    font-weight: 650;
+    text-transform: capitalize;
+  }
+
+  .job-card h6{
+    text-transform: capitalize;
+    font-size: 18px;
+  }
+
+  .job-card p{
+    text-transform: capitalize;
+    margin-bottom: 0px;
+    font-weight: 500;
+  }
+
+  .job{
+    background-color: #cde0c9;
+  }
+
+  .job a{
+    background-color: #2c6975; 
+    height: 2rem;
+  }
+
+  .job-detail-button{
+    background-color: #2c6975; 
+    width: 10rem; 
+    height: 2.5rem;
+    color:white
+  }
+
+  .heading h3{
+    
+    text-transform: capitalize;
+  }
+/* form */
+
+.jobform{
+    background-color: #e0ecde;
+}
+
+.input-length{
+    width: 18rem;
+}
+.black-border{
+    border: 1px solid black;
+}
+
+.form-label{
+    font-size: 1rem; 
+    font-weight: 500;
+}
+
+.form-container {
+    display:table;
+    max-width:900px;
+    width:100%;
+    box-shadow:1px 1px 5px rgba(0,0,0,0.1);
+  }
+  
+  .form-container form {
+    display:table-cell;
+    width:400px;
+    background-color:#ffffff;
+    padding:40px 60px;
+    color:#505e6c;
+  }
+  
+  @media (max-width:991px) {
+    .register-photo form {
+      padding:40px;
+    }
+  }
+  
+  .form-container form h2 {
+    font-size:24px;
+    line-height:1.5;
+    margin-bottom:30px;
+  }
+  
+  .form-container form .form-control {
+    background:#f7f9fc;
+    border:none;
+    border-bottom:1px solid #dfe7f1;
+    border-radius:0;
+    box-shadow:none;
+    outline:none;
+    color:inherit;
+    text-indent:6px;
+    height:40px;
+  }
+  
+  .form-container form .form-check {
+    font-size:13px;
+    line-height:20px;
+  }
+  
+  .form-container form .btn-primary {
+    background:#f4476b;
+    border:none;
+    border-radius:4px;
+    padding:11px;
+    box-shadow:none;
+    margin-top:35px;
+    text-shadow:none;
+    outline:none !important;
+  }
+  
+  .form-container form .btn-primary:hover, .form-container form .btn-primary:active {
+    background:#eb3b60;
+  }
+  
+  .form-container form .btn-primary:active {
+    transform:translateY(1px);
+  }
+  
+  .form-container form .already {
+    display:block;
+    text-align:center;
+    font-size:12px;
+    color:#6f7a85;
+    opacity:0.9;
+    text-decoration:none;
+  }
+  
+  /* skills in the job  */
+
+  .skillreq{
+    border: .5px solid black;
+    border-radius: 5px;
+    height: 1.7rem;
+    padding-left: 4px;
+    color: #0a0a0a;
+    padding-right: 4px;
+    text-transform: capitalize;
+    padding-bottom: 2px;
+    margin: 2px;
+    background-color:#68B2A0;
+}
+
+  /* Posting a job form */
+
+  .card{
+    padding: 15px 20px;
+    width:100% !important;
+    /* margin-top: 60px;
+    margin-bottom: 60px; */
+    border: none !important;
+    box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2)
+  }
+  .blue-text{
+    color: #00BCD4
+  }
+  .form-control-label{
+    margin-bottom: 0
+  }
+  
+  input, textarea, button{
+    padding: 8px 15px;
+    border-radius: 5px !important;
+    margin: 5px 0px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    font-size: 18px !important;
+    font-weight: 300
+  }
+  
+  input:focus, textarea:focus{
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #00BCD4;
+    outline-width: 0;
+    font-weight: 400
+  }
+  
+  .btn-block{
+    text-transform: uppercase;
+    font-size: 15px !important;
+    font-weight: 400;
+    height: 43px;
+    cursor: pointer
+  }
+  .btn-block:hover{
+    color: #fff !important
+  }
+  
+  button:focus{
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0
+  }

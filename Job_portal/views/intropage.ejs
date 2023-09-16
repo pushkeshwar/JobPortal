@@ -1,0 +1,15 @@
+<div class="background">
+    <div class="container">
+        <div class="heading">
+            <h1> A Comprehensive platform for reliable</h1>
+            <h3 class="animate_bounce infinite">Job opportunities and Internships</h3>
+            <h5 class="fading" >Get Discovered. Get Hired</h5>
+            <% if(locals.CandidateEmail || locals.RecruiterEmail) {%>
+            <% }else { %>
+            <a href="/jobs" class="btn btn-secondary btn-lg mt-2">I'm A Job Seeker</a>
+            <!-- Button trigger modal -->
+            <a href="/recruiter-register" class="btn btn-secondary btn-lg mt-2">I'm A Recruiter</a>
+            <% } %>
+       </div>
+    </div>
+</div>

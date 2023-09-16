@@ -1,0 +1,69 @@
+<script>
+    $(document).ready(function(){
+        $("#exampleModal").modal('show');
+    });
+</script>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header"  style="background-color:#68B2A0">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Easily</h1>
+          <a href="/recruiter-dashboard" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
+        </div>
+        <div class="modal-body jobform">
+            <!-- <div class="container-fluid"> -->
+                <div class="card" style="background-color: #e0ecde; box-shadow: none !important">
+                    <h3 class="text-center mb-4">Post a Job</h3>
+                    <form class="form-card"  method="post">
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label  class="form-control-label px-3 form-label">Comapany Name<span class="text-danger"> *</span></label> <input class="black-border input-length" type="text" id="fname" name="cname" value="<%= job.name %>" placeholder="Enter your company name"> </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3 form-label" for="roles">Role<span class="text-danger"> *</span><br>
+                               <select name="roles" id="roles" class="input-length" style="height:2.5rem; margin-left: -5%;">
+                                <option value="software-developer">Software Developer</option>
+                                <option value="software-engineer">Software Engineer</option>
+                                <option value="frontent">Frontent Developer</option>
+                                <option value="backend">Backend Developer</option>
+                               </select>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3 form-label">Location<span class="text-danger"> *</span></label> <input class="black-border input-length" type="text" id="location" name="location" value="<%= job.location %>" placeholder="Enter the Location"> </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3 form-label">Package<span class="text-danger"> *</span></label> <input class="black-border input-length" type="text" id="pack" name="pack"  value="<%= job.pack %>" placeholder="Enter the Pacakge"> </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3 form-label" for="deadline">Deadline<span class="text-danger"> *</span></label> <input class="black-border input-length" type="date" id="deadline" value="<%= job.deadline %>" name="deadline"> </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3 form-label">Number Of Opening<span class="text-danger"> *</span></label> <input class="black-border input-length" type="text" id="opening" name="opening" value="<%= job.opening %>" placeholder="Candidates Required"> </div>
+
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-12 flex-column d-flex"><label class="form-control-label  form-label px-3" for="skills">Skills Required<span class="text-danger"> *</span></label>
+                                <select name="skills" id="skills" class="mt-1" multiple style="width:20rem; height:2.5rem">
+                                    <option value="java">Java</option>
+                                    <option value="dbms">DBMS</option>
+                                    <option value="html">HTML</option>
+                                    <option value="css">CSS</option>
+                                    <option value="mongo">Mongo DB</option>
+                                    <option value="node">Node.Js</option>
+                                    <option value="react">React</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-sm-6"> <button style="background-color: #68B2A0; margin-left: 53%; color: black ; border: none; font-size: 3rem; font-weight: 700;" type="submit" class="btn btn-primary btn-block">Update</button> </div>
+                        </div>
+                    </form>
+                </div>
+            <!-- </div> -->
+            <script type="text/javascript">
+                $(function(){
+                    $('#skills').multiSelect();
+                });
+            </script>
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div> -->
+      </div>
+    </div>
+  </div>

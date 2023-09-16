@@ -1,0 +1,27 @@
+<div class="container">
+    <% if(jobs.length==0) {%>
+        <h3 class="mt-5"> Sorry !! No result found.</h3>
+    <% } else {  %>
+        <div class="d-flex flex-wrap mt-5">
+            <% jobs.forEach(job=> { %>
+            <div class="card m-4 job" style="width:18rem !important ;">
+                <div class="card-body job-card">
+                  <h4 class="card-title"><%=job.name %></h4>
+                  <h6 class="card-subtitle mb-4 text-muted"><%=job.position %></h6>
+                  <p><span><i class="fa-solid fa-location-dot mr-2"></i></span><%=job.location %></p>
+                  <p><i class="fa-solid fa-dollar-sign mr-2"></i><%=job.pack %></p>
+                  <div class="d-flex flex-wrap mt-5">
+                    <% job.skills.forEach(skill=> { %>
+                  <div class="skillreq"><%= skill %></div>
+                  <% }) %>
+                  </div>
+                 <% if(locals.RecruiterEmail){ %>
+                 <% } else{ %>
+                    <a href="/details/<%= job.id %>"   class="btn btn-sm btn-block  btn-secondary mt-4" >View Details</a>
+                 <% } %>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+    <% } %>
+</div>

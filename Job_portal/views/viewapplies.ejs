@@ -1,0 +1,31 @@
+<div class="container">
+    <h4 class="mt-5 mb-4 header">Below are the candidates who applied to this job: </h4>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% jobs.forEach(job=> { %>
+            <tr>
+                <th scope="row">
+                    <%= job.name%>
+                </th>
+                <td>
+                    <%= job.email %>
+                </td>
+                <td>
+                    <%= job.phone %>
+                </td>
+                <td><a href="../public/<%= job.resume%>" target="_blank" class="btn btn-primary"> View</a>
+                </td>
+            </tr>
+            <% }) %>
+    </tbody>
+  </table>
+</div>
+</div>

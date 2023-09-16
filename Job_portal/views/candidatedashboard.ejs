@@ -1,0 +1,32 @@
+
+<div class="container">
+    <div class="mt-5 d-flex justify-content-between">
+        <h2 style="display: inline-block; font-weight: 700;">Welcome To The Dashboard</h2>
+        <a href="/jobs" type="button" style="background-color: #2c6975; " class="btn btn-primary" >
+            Apply for a Job
+        </a>
+      </div>    <% if(jobs.length>0){ %>
+        <div class="d-flex flex-wrap mt-2">
+            <% jobs.forEach(job=> { %>
+            <div class="card m-5 job" style="width:20rem !important">
+                <div class="card-body job-card">
+                  <h5 class="card-title"><%=job.name %></h5>
+                  <h6 class="card-subtitle mb-4 text-muted"><%=job.position %></h6>
+                  <p><i class="fa-solid fa-location-dot mr-2"></i><%=job.location %></p>
+                  <p><i class="fa-solid fa-location-dot mr-2"></i><%=job.pack %></p>
+                  <p><i class="fa-solid fa-hourglass-start mr-2"></i>deadline:<%=job.deadline %></p>
+                  <p> <i class="fa-solid fa-user"></i> opening: <%=job.opening %></p>
+                  <div class="d-flex flex-wrap mt-4">
+                    <% job.skills.forEach(skill=> { %>
+                  <div class="skillreq"><%= skill %></div>
+                  <% }) %>
+                  </div>
+                  <a href="/details/<%= job.id %>" class="btn btn-sm btn-block  btn-secondary mt-4">View Details</a>
+                </div>
+            </div>
+            <% }) %>
+            </div>
+        <% }else { %>
+            <h3  class="text-center mt-5" > You have not applied to any job yet.<span>&#128543</span></h3>
+    <% } %>
+</div>
